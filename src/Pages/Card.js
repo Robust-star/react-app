@@ -12,11 +12,17 @@ import {
 const useStyles = makeStyles((theme) => ({
     root: {
         maxWidth: 200,
-        margin: "8rem 0 0 15rem",
+        marginLeft: "6rem",
+        marginRight: "6rem",
+        marginTop:"10rem"
     },
     text: {
         margin: "10rem",
         fontSize: "2.5rem",
+        [theme.breakpoints.down('sm')]:{
+            margin: "5rem",
+            fontSize: "1rem",
+          }
     },
 }));
 
@@ -25,8 +31,8 @@ export default function LandingCard() {
 
     return (
         <div>
-            <Grid container>
-                <Grid item lg={6}>
+            <Grid container justify={"center"}>
+            <Grid item lg={6} sm={12} xs={12} alignItems="center">
                     <Typography className={classes.text}>
                         Welcome to Hello World
             <br />
@@ -35,7 +41,7 @@ export default function LandingCard() {
             Solutions! Good Luck.
           </Typography>
                 </Grid>
-                <Grid item lg={6}>
+                <Grid item lg={4} sm={12} xs={12} justify>
                     <Card className={classes.root}>
                         <CardActionArea>
                             <CardMedia
